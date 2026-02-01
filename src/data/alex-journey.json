@@ -1,0 +1,178 @@
+{
+  "character_id": "alex",
+  "character_name": "Alex",
+  "starting_age": 18,
+  "starting_status": {
+    "money": 0,
+    "credit": "Not built",
+    "stress": "medium",
+    "opportunities": 4
+  },
+  "decisions": [
+    {
+      "id": "decision_1",
+      "age": 18,
+      "month": "June 2024",
+      "title": "Internship Offer",
+      "scenario": "GlobalFoundries offered you a paid internship: $28/hr for the summer (12 weeks, 40hrs/week). After taxes, you'll make about $9,500. Your friends are backpacking Europe and want you to join ($3,000 for 3 weeks).",
+      "context_info": "Early career internships build your resume and can lead to full-time offers. But experiences with friends are also valuable. This is about weighing opportunity cost.",
+      "choices": [
+        {
+          "id": "choice_1a",
+          "label": "💼 Take the internship, skip Europe",
+          "immediate_outcome": {
+            "text": "You committed to the internship. You'll start Monday. Your friends left for Europe without you - FOMO is real.",
+            "status_changes": {}
+          },
+          "delayed_consequence": {
+            "age": 18,
+            "month": "September 2024",
+            "months_later": 3,
+            "text": "You made $9,500 and learned semiconductor manufacturing. GlobalFoundries offered you a part-time position during college ($25/hr, 15hrs/week). Your resume is now competitive for tech jobs.",
+            "why": "Internships open doors. The $9,500 + future job offer + resume boost was worth more than the Europe trip. Your friends' photos made you jealous, but you invested in your future.",
+            "status_changes": {
+              "money": 9500,
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_1b",
+          "label": "✈️ Go to Europe, decline internship",
+          "immediate_outcome": {
+            "text": "Europe was incredible! You spent $3,000 on the trip. You worked at Panera for the rest of summer ($14/hr). You made about $2,800 in 8 weeks.",
+            "status_changes": {
+              "money": -200
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "May 2025",
+            "months_later": 11,
+            "text": "You're applying for summer internships again. Companies asked why you declined GlobalFoundries. You don't have semiconductor experience on your resume. Most positions are already filled by students who interned last summer.",
+            "why": "Declining a strong internship has costs beyond just the money. In competitive fields, early experience compounds. Europe was fun but didn't build your career capital.",
+            "status_changes": {
+              "money": 2800,
+              "stress": "high",
+              "opportunities": 2
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_2",
+      "age": 19,
+      "month": "August 2025",
+      "title": "401k Enrollment",
+      "scenario": "GlobalFoundries offers full-time after graduation: $65,000/year. During orientation, they explained the 401k: you can contribute up to 6% of salary, they'll match 100%. That's free money. But 6% is $325/month you won't see in your paycheck.",
+      "context_info": "Employer 401k match is the best investment deal you'll ever get - it's an instant 100% return. But it's locked until retirement (age 59½), and many young people skip it to have more cash now.",
+      "choices": [
+        {
+          "id": "choice_2a",
+          "label": "✅ Contribute 6% to get full match",
+          "immediate_outcome": {
+            "text": "You enrolled at 6%. Your paycheck will be $325/month less, but GlobalFoundries adds $325/month to your 401k. Your take-home is still $4,092/month.",
+            "status_changes": {
+              "money": 4092
+            }
+          },
+          "delayed_consequence": {
+            "age": 25,
+            "month": "August 2031",
+            "months_later": 72,
+            "text": "Your 401k has $53,000. You contributed $23,400 over 6 years. GlobalFoundries contributed $23,400 (the match). Investment growth added $6,200. You got $29,600 in free money by saying yes at 19.",
+            "why": "Starting retirement savings at 19 instead of 25 means 6 extra years of compound growth. The match is free money you can never get back if you skip it. Your 25-year-old self is very grateful.",
+            "status_changes": {
+              "money": 53000,
+              "stress": "low",
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_2b",
+          "label": "❌ Skip it, maximize paycheck now",
+          "immediate_outcome": {
+            "text": "You declined the 401k. Your full paycheck is $4,417/month. You'll figure out retirement later - you're only 19.",
+            "status_changes": {
+              "money": 4417
+            }
+          },
+          "delayed_consequence": {
+            "age": 25,
+            "month": "August 2031",
+            "months_later": 72,
+            "text": "You finally enrolled in the 401k at 25. You have $0 saved. Your friends who started at 19 have $50,000+. You left $23,400 in free matching money on the table. You can never get those years back.",
+            "why": "Skipping the 401k match is leaving free money on the table. The extra $325/month in your paycheck was spent on things you don't remember. Starting 6 years late costs you hundreds of thousands by retirement age.",
+            "status_changes": {
+              "money": 0,
+              "stress": "high",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_3",
+      "age": 21,
+      "month": "March 2027",
+      "title": "Car Purchase",
+      "scenario": "Your 2008 Honda died. You need a car for work. Options: (1) Used Toyota Camry 2018, $18,000, reliable, 5% loan. (2) New Tesla Model 3, $45,000, 7% loan, your dream car. (3) Cheaper used car $8,000, might need repairs.",
+      "context_info": "Cars depreciate fast. New cars lose 20% value when you drive off the lot. A $45k car on a $65k salary means high payments that limit other financial goals.",
+      "choices": [
+        {
+          "id": "choice_3a",
+          "label": "🚗 Buy the reliable used Camry ($18k)",
+          "immediate_outcome": {
+            "text": "You financed $18,000 at 5% for 5 years. Your payment is $340/month. The car is clean, reliable, and has 45,000 miles. Not exciting but smart.",
+            "status_changes": {
+              "money": -340
+            }
+          },
+          "delayed_consequence": {
+            "age": 25,
+            "month": "March 2031",
+            "months_later": 48,
+            "text": "Your Camry has 90,000 miles and runs perfectly. You paid it off (total paid: $20,400). It's worth $12,000. Total cost of ownership: $8,400. You saved the difference and have $15,000 for a house down payment.",
+            "why": "Reliable used cars are the financial sweet spot. You avoided new car depreciation, kept payments reasonable, and freed up money for wealth-building goals.",
+            "status_changes": {
+              "money": 15000,
+              "stress": "low",
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_3b",
+          "label": "⚡ Buy the Tesla ($45k)",
+          "immediate_outcome": {
+            "text": "You financed $45,000 at 7% for 6 years. Your payment is $767/month. The car is incredible - tech, performance, looks. You feel successful.",
+            "status_changes": {
+              "money": -767
+            }
+          },
+          "delayed_consequence": {
+            "age": 25,
+            "month": "March 2031",
+            "months_later": 48,
+            "text": "You've paid $36,816 so far and still owe $15,000. The car is worth $22,000. You're underwater on the loan. Your friends are buying houses - you can't afford a down payment because $767/month for 4 years ate your savings ability.",
+            "why": "Cars are tools, not investments. Spending 70% of your annual salary on a car meant you couldn't save for wealth-building. The $767/month difference could have been $36,816 toward a house.",
+            "status_changes": {
+              "money": -36816,
+              "stress": "very high",
+              "opportunities": 2
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    }
+  ]
+}

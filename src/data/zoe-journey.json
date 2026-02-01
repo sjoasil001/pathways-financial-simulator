@@ -1,0 +1,357 @@
+{
+  "character_id": "sam",
+  "character_name": "Sam",
+  "starting_age": 17,
+  "starting_status": {
+    "money": 80,
+    "credit": "Not built",
+    "stress": "medium",
+    "opportunities": 3
+  },
+  "decisions": [
+    {
+      "id": "sam_d1_schedule",
+      "age": 17,
+      "month": "September 2024",
+      "title": "The Schedule Problem",
+      "scenario": "You’re a student-athlete with practices 5 days a week. You also need money for basics (food, rides, school stuff). A local job offers you 18 hours/week at $15/hr, but it conflicts with practice twice a week. Your coach says attendance matters for playing time.",
+      "context_info": "For student-athletes, time is a budget. Every hour you add has a cost: grades, sleep, and performance. The best move usually keeps you eligible, healthy, and consistent—even if it’s not the most money immediately.",
+      "choices": [
+        {
+          "id": "sam_d1_c1",
+          "label": "💪 Take the 18 hrs/week job and make it work",
+          "immediate_outcome": {
+            "text": "You hustle. Your bank balance grows fast and you feel independent. But you’re exhausted and start arriving late to practice.",
+            "status_changes": {
+              "money": 220,
+              "stress": "high",
+              "opportunities": 3
+            }
+          },
+          "delayed_consequence": {
+            "age": 17,
+            "month": "November 2024",
+            "months_later": 2,
+            "text": "You miss two practices in a row during a busy week. Your coach benches you for a game. You feel embarrassed and your motivation drops. Schoolwork starts slipping too.",
+            "why": "Overcommitting can create a domino effect: sleep loss → worse performance → fewer opportunities. Consistency is often more valuable than short-term money.",
+            "status_changes": {
+              "money": 260,
+              "stress": "high",
+              "opportunities": 2
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "sam_d1_c2",
+          "label": "🧠 Negotiate 10–12 hours/week + protect practice days",
+          "immediate_outcome": {
+            "text": "You ask for fewer hours and keep practice as a priority. You earn less, but your schedule feels sustainable.",
+            "status_changes": {
+              "money": 160,
+              "stress": "medium",
+              "opportunities": 4
+            }
+          },
+          "delayed_consequence": {
+            "age": 17,
+            "month": "November 2024",
+            "months_later": 2,
+            "text": "Because you stay consistent, you get more playing time. A teacher also recommends you for a small scholarship opportunity. You’re not rich, but you’re stable.",
+            "why": "A sustainable plan protects eligibility and performance. In the long run, that can unlock scholarships, recommendations, and leadership opportunities.",
+            "status_changes": {
+              "money": 210,
+              "stress": "medium",
+              "opportunities": 5
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "sam_d1_c3",
+          "label": "📋 Build a budget first and cut costs before adding hours",
+          "immediate_outcome": {
+            "text": "You list your expenses and realize small changes (meal planning, limiting rideshares, tracking spending) could reduce your need to work so much.",
+            "status_changes": {
+              "money": 120,
+              "stress": "low",
+              "opportunities": 4
+            }
+          },
+          "delayed_consequence": {
+            "age": 17,
+            "month": "November 2024",
+            "months_later": 2,
+            "text": "You start saving little by little without burning out. You feel more in control and less stressed because you’re not constantly scrambling.",
+            "why": "Budgeting can be an alternative to overworking. Reducing expenses often has the same impact as earning more—without the time cost.",
+            "status_changes": {
+              "money": 190,
+              "stress": "low",
+              "opportunities": 5
+            },
+            "tutorial_id": "budgeting"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sam_d2_grades",
+      "age": 18,
+      "month": "February 2025",
+      "title": "Eligibility on the Line",
+      "scenario": "Midterms hit hard. Your grades start dropping. You need a minimum GPA to stay eligible for sports and for a potential scholarship. You also need money, and your job wants you to take extra shifts.",
+      "context_info": "Eligibility is an invisible asset. Losing it can cost scholarships, team placement, and future opportunities. The smartest choice protects your long-term options even if it costs short-term money.",
+      "choices": [
+        {
+          "id": "sam_d2_c1",
+          "label": "🕒 Take extra shifts and hope grades recover later",
+          "immediate_outcome": {
+            "text": "You earn more money and feel relieved about expenses. But you lose study time and fall further behind.",
+            "status_changes": {
+              "money": 320,
+              "stress": "high",
+              "opportunities": 3
+            }
+          },
+          "delayed_consequence": {
+            "age": 18,
+            "month": "May 2025",
+            "months_later": 3,
+            "text": "Your GPA drops below the requirement. You lose eligibility for postseason play and a scholarship lead disappears. You regret it because the money didn’t last—but the missed opportunity does.",
+            "why": "Some losses aren’t financial at first. When you lose eligibility, you lose doors that can change your long-term trajectory.",
+            "status_changes": {
+              "money": 260,
+              "stress": "high",
+              "opportunities": 1
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "sam_d2_c2",
+          "label": "📚 Cut work hours temporarily and get academic support",
+          "immediate_outcome": {
+            "text": "You reduce shifts and use tutoring / office hours. It’s stressful financially, but you feel your grades stabilize.",
+            "status_changes": {
+              "money": 200,
+              "stress": "medium",
+              "opportunities": 4
+            }
+          },
+          "delayed_consequence": {
+            "age": 18,
+            "month": "May 2025",
+            "months_later": 3,
+            "text": "You bring your GPA back up and stay eligible. You get a strong recommendation from a teacher. You didn’t earn as much, but your future got bigger.",
+            "why": "When your long-term options depend on grades, short-term sacrifice can be the highest ROI choice you can make.",
+            "status_changes": {
+              "money": 240,
+              "stress": "medium",
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "sam_d2_c3",
+          "label": "🧾 Apply for assistance + reduce expenses instead of working more",
+          "immediate_outcome": {
+            "text": "You explore help programs (food pantry, campus/community resources) and adjust spending. It feels awkward, but it reduces pressure.",
+            "status_changes": {
+              "money": 230,
+              "stress": "low",
+              "opportunities": 5
+            }
+          },
+          "delayed_consequence": {
+            "age": 18,
+            "month": "May 2025",
+            "months_later": 3,
+            "text": "You avoid burnout, keep your grades stable, and still cover necessities. You learn that support systems exist—and using them is a strategy, not a failure.",
+            "why": "Community resources reduce the need to overwork. Less stress can improve performance in both school and sports.",
+            "status_changes": {
+              "money": 260,
+              "stress": "low",
+              "opportunities": 6
+            },
+            "tutorial_id": "local_resources"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sam_d3_shoes",
+      "age": 19,
+      "month": "September 2025",
+      "title": "The ‘Small’ Purchase That Snowballs",
+      "scenario": "Your teammates all have new shoes and gear. You want to fit in and perform well. You don’t have much saved, but you get offered a store credit card with '10% off today.'",
+      "context_info": "Store cards can be tempting because the discount feels like free money. But high interest and missed payments can hurt your credit—making future goals (apartment, car, loans) harder.",
+      "choices": [
+        {
+          "id": "sam_d3_c1",
+          "label": "🛍️ Get the store card for the discount",
+          "immediate_outcome": {
+            "text": "You get the shoes and feel confident. The discount makes it feel smart. You tell yourself you’ll pay it off quickly.",
+            "status_changes": {
+              "money": 210,
+              "credit": "Building",
+              "stress": "medium",
+              "opportunities": 5
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "December 2025",
+            "months_later": 3,
+            "text": "You miss a payment during a busy month. Late fees hit and your score drops. You feel embarrassed and stressed because now you’re paying extra for shoes you already wore.",
+            "why": "High interest + fees punish inconsistent cash flow. A small purchase can become expensive when payments slip.",
+            "status_changes": {
+              "money": 120,
+              "credit": "Damaged (590)",
+              "stress": "high",
+              "opportunities": 3
+            },
+            "tutorial_id": "credit_cards"
+          }
+        },
+        {
+          "id": "sam_d3_c2",
+          "label": "💵 Buy a cheaper pair now and save for the rest",
+          "immediate_outcome": {
+            "text": "It’s not the flashiest, but you stay within your means. You feel slightly left out, but proud you didn’t create debt.",
+            "status_changes": {
+              "money": 170,
+              "stress": "low",
+              "opportunities": 5
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "December 2025",
+            "months_later": 3,
+            "text": "You stay stable and keep saving. When a bigger opportunity comes (training camp / travel), you can afford it without panic.",
+            "why": "Avoiding high-interest debt protects flexibility. Flexibility creates opportunities.",
+            "status_changes": {
+              "money": 260,
+              "stress": "low",
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "sam_d3_c3",
+          "label": "🤝 Ask about team support / secondhand gear options",
+          "immediate_outcome": {
+            "text": "You learn your program has extra gear and your teammate knows a secondhand option in good condition. You get what you need without going broke.",
+            "status_changes": {
+              "money": 200,
+              "stress": "low",
+              "opportunities": 6
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "December 2025",
+            "months_later": 3,
+            "text": "You realize community + asking questions can solve money problems faster than debt. You build confidence and stay focused on performance.",
+            "why": "Social strategies (asking, sharing resources) can reduce financial pressure and protect credit.",
+            "status_changes": {
+              "money": 270,
+              "credit": "Fair (650)",
+              "stress": "low",
+              "opportunities": 7
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "sam_d4_summer",
+      "age": 20,
+      "month": "June 2026",
+      "title": "Summer Money Decision",
+      "scenario": "You have the summer off from school schedules, but training still exists. You can either grind a full-time job, do an internship with lower pay, or focus on training and school prep.",
+      "context_info": "Summer choices matter because they affect resumes, scholarships, and future earnings. A lower-paying internship can have higher long-term ROI than a higher-paying job with no growth.",
+      "choices": [
+        {
+          "id": "sam_d4_c1",
+          "label": "💰 Full-time job for maximum money",
+          "immediate_outcome": {
+            "text": "You stack money quickly and feel secure. But you’re tired and your training consistency drops.",
+            "status_changes": {
+              "money": 520,
+              "stress": "medium",
+              "opportunities": 6
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "September 2026",
+            "months_later": 3,
+            "text": "You have money, but you missed the chance to build your resume. When internship applications open, you feel behind and stressed.",
+            "why": "Cash helps now, but experience can multiply your future earnings. A balance is ideal, but choosing only money can limit growth.",
+            "status_changes": {
+              "money": 410,
+              "stress": "high",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "sam_d4_c2",
+          "label": "🧑‍💼 Take the internship even if it pays less",
+          "immediate_outcome": {
+            "text": "You earn less today, but you gain skills, references, and confidence. Your time feels purposeful.",
+            "status_changes": {
+              "money": 360,
+              "stress": "low",
+              "opportunities": 8
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "September 2026",
+            "months_later": 3,
+            "text": "Your resume stands out. You’re offered another opportunity the next year. You feel like you’re building something long-term.",
+            "why": "Experience compounds. A strong internship can increase future earnings far more than one summer of higher pay.",
+            "status_changes": {
+              "money": 420,
+              "stress": "low",
+              "opportunities": 9
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "sam_d4_c3",
+          "label": "📊 Mix: part-time job + training + skill-building",
+          "immediate_outcome": {
+            "text": "You create a balanced schedule: part-time income, consistent training, and time to learn a new skill.",
+            "status_changes": {
+              "money": 420,
+              "stress": "low",
+              "opportunities": 8
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "September 2026",
+            "months_later": 3,
+            "text": "You enter the school year stable and prepared. You didn’t max money or max resume—but you built a sustainable base.",
+            "why": "A balanced plan protects health and creates steady progress. Sustainability is a competitive advantage.",
+            "status_changes": {
+              "money": 460,
+              "credit": "Fair (660)",
+              "stress": "low",
+              "opportunities": 9
+            },
+            "tutorial_id": "budgeting"
+          }
+        }
+      ]
+    }
+  ]
+}

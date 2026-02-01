@@ -1,0 +1,250 @@
+{
+  "character_id": "maya",
+  "character_name": "Maya",
+  "starting_age": 17,
+  "starting_status": {
+    "money": 0,
+    "credit": "Not built",
+    "stress": "low",
+    "opportunities": 2
+  },
+  "decisions": [
+    {
+      "id": "decision_1",
+      "age": 17,
+      "month": "June 2024",
+      "title": "First Paycheck",
+      "scenario": "You just got your first paycheck from Crossgates Mall: $487 after taxes (2 weeks of work at $15/hr).",
+      "context_info": "This is your take-home pay. Most people spend their first paycheck immediately and struggle until the next one. What you do now affects your next few months.",
+      "choices": [
+        {
+          "id": "choice_1a",
+          "label": "Celebrate! Spend most of it",
+          "immediate_outcome": {
+            "text": "You had an amazing weekend! New clothes, dinner with friends, concert tickets at MVP Arena. You spent $437.",
+            "status_changes": {
+              "money": 50
+            }
+          },
+          "delayed_consequence": {
+            "age": 17,
+            "month": "August 2024",
+            "months_later": 2,
+            "text": "Your car insurance payment ($150) bounced. $35 overdraft fee + $50 late fee. Your policy was cancelled. Without insurance, you can't legally drive to work in Guilderland. You had to call out twice and got written up.",
+            "why": "After your celebration, you didn't have a buffer. When unexpected expenses hit (car repair $180), it wiped you out. This started a cascade of fees and missed payments.",
+            "status_changes": {
+              "money": -120,
+              "stress": "high",
+              "opportunities": 1
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_1b",
+          "label": "Save half, spend half",
+          "immediate_outcome": {
+            "text": "You treated yourself to some new things but put $240 aside in your SEFCU account. It feels good to see money saved.",
+            "status_changes": {
+              "money": 240
+            }
+          },
+          "delayed_consequence": {
+            "age": 17,
+            "month": "August 2024",
+            "months_later": 2,
+            "text": "When your car needed a $180 repair, you had the money. You handled it without stress. Your manager noticed your reliability and offered you more hours.",
+            "why": "Having a small buffer meant unexpected expenses didn't derail you. You avoided fees and kept your opportunities open.",
+            "status_changes": {
+              "money": 60,
+              "stress": "low",
+              "opportunities": 3
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_1c",
+          "label": "Ask a parent/trusted adult what to do",
+          "immediate_outcome": {
+            "text": "Your aunt suggested: pay any bills first, save $200, spend the rest. You followed her advice and opened a SEFCU savings account.",
+            "status_changes": {
+              "money": 200
+            }
+          },
+          "delayed_consequence": {
+            "age": 17,
+            "month": "August 2024",
+            "months_later": 2,
+            "text": "When expenses hit, you were prepared. Your aunt also helped you set up automatic savings of $50/paycheck. You're building good habits early.",
+            "why": "Asking for help is a strength. You gained both money and knowledge about managing finances.",
+            "status_changes": {
+              "money": 80,
+              "stress": "low",
+              "opportunities": 3
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_2",
+      "age": 19,
+      "month": "April 2026",
+      "title": "Tax Filing",
+      "scenario": "You received a W-2 form in the mail from Crossgates. It shows you earned $18,200 last year. The deadline to file taxes is April 15.",
+      "context_info": "Filing taxes reports your yearly income to the IRS. You might owe money or get a refund. Ignoring this doesn't make it go away.",
+      "choices": [
+        {
+          "id": "choice_2a",
+          "label": "File taxes using free software",
+          "immediate_outcome": {
+            "text": "You used IRS Free File. It took 45 minutes. Turns out you're getting a $480 refund! It'll arrive in 2-3 weeks.",
+            "status_changes": {
+              "money": 0
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "May 2026",
+            "months_later": 1,
+            "text": "Your refund arrived! $480 in your account. Plus, you now have a record of filed taxes, which landlords in Troy and Albany ask for when you apply for apartments.",
+            "why": "Filing on time means you got your refund quickly and built a paper trail of financial responsibility that opens doors.",
+            "status_changes": {
+              "money": 480,
+              "credit": "Building",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_2b",
+          "label": "Ignore it - looks complicated",
+          "immediate_outcome": {
+            "text": "You threw it away. Nothing happens immediately. Life continues as normal.",
+            "status_changes": {}
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "October 2027",
+            "months_later": 18,
+            "text": "IRS Notice arrived: You owe $920. Original taxes: $280. Failure-to-file penalty: $470. Interest: $170. Your bank account is frozen until you pay.",
+            "why": "When you don't file taxes, the IRS charges 5% penalty per month (max 25%) plus 8% annual interest. Your $280 bill became $920 in 18 months.",
+            "status_changes": {
+              "money": -920,
+              "credit": "Damaged (580)",
+              "stress": "very high",
+              "opportunities": 0
+            },
+            "tutorial_id": "tax_filing"
+          }
+        },
+        {
+          "id": "choice_2c",
+          "label": "Pay someone $150 to file for me",
+          "immediate_outcome": {
+            "text": "You went to a tax place on Central Avenue. They charged $150 and filed your return. You're getting a $480 refund.",
+            "status_changes": {
+              "money": -150
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "May 2026",
+            "months_later": 1,
+            "text": "Your refund arrived: $480. But you paid $150 to file. Net gain: $330. You realize you could have used free software and kept that $150.",
+            "why": "Paying for simple tax filing when free options exist means less money in your pocket. For basic W-2s, free software works fine.",
+            "status_changes": {
+              "money": 330,
+              "credit": "Building",
+              "opportunities": 3
+            },
+            "tutorial_id": "tax_filing"
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_3",
+      "age": 20,
+      "month": "September 2027",
+      "title": "Credit Card Offer",
+      "scenario": "You got a Discover student credit card offer in the mail. $1,500 credit limit, 22% APR. No annual fee.",
+      "context_info": "Credit cards let you borrow money you pay back later. If you don't pay in full each month, you're charged 22% interest. This can add up fast. But using one responsibly builds credit.",
+      "choices": [
+        {
+          "id": "choice_3a",
+          "label": "Accept card, use it carefully",
+          "immediate_outcome": {
+            "text": "You got the card. You used it for gas ($50) and groceries ($80), then paid the full $130 when the bill came.",
+            "status_changes": {
+              "money": -130
+            }
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "March 2028",
+            "months_later": 6,
+            "text": "Your credit score is now 720! By always paying in full and on time, you've built excellent credit. When you applied for an apartment in Troy, you got approved immediately with no co-signer needed.",
+            "why": "Responsible credit card use is the fastest way to build credit. You paid no interest and built a valuable financial asset.",
+            "status_changes": {
+              "money": 0,
+              "credit": "Good (720)",
+              "stress": "low",
+              "opportunities": 5
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_3b",
+          "label": "Accept card, use it freely",
+          "immediate_outcome": {
+            "text": "You got the card and went shopping. New laptop ($800), clothes ($300), concert tickets ($150). Total: $1,250. You paid the $35 minimum payment.",
+            "status_changes": {
+              "money": -35
+            }
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "March 2028",
+            "months_later": 6,
+            "text": "You still owe $1,400 (original $1,250 + $150 in interest). Minimum payments barely cover the interest. You're paying $35/month but the balance isn't going down. It will take 9 years to pay off at this rate.",
+            "why": "Carrying a balance means you pay 22% interest on top of your purchases. That $800 laptop actually costs $1,100+ when you factor in interest.",
+            "status_changes": {
+              "money": -1400,
+              "credit": "Fair (650)",
+              "stress": "high",
+              "opportunities": 2
+            },
+            "tutorial_id": "credit_cards"
+          }
+        },
+        {
+          "id": "choice_3c",
+          "label": "Decline - don't want debt",
+          "immediate_outcome": {
+            "text": "You threw away the offer. You're staying debt-free.",
+            "status_changes": {}
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "March 2028",
+            "months_later": 6,
+            "text": "You applied for an apartment in downtown Albany. They rejected you - no credit history. The landlord wanted a co-signer plus double security deposit ($2,400 extra). Without credit, you have fewer housing options.",
+            "why": "Having NO credit is sometimes worse than having bad credit. Landlords, car dealers, and employers check credit. Building it responsibly opens doors.",
+            "status_changes": {
+              "money": 0,
+              "credit": "None",
+              "stress": "medium",
+              "opportunities": 2
+            },
+            "tutorial_id": "credit_cards"
+          }
+        }
+      ]
+    }
+  ]
+}

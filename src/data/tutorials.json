@@ -1,0 +1,65 @@
+{
+  "tutorials": [
+    {
+      "id": "tax_filing",
+      "title": "How to File Taxes",
+      "estimated_time": "5 min",
+      "sections": [
+        {
+          "step": 1,
+          "title": "Gather Your Documents",
+          "content": "You need:\n• W-2 form from your employer\n• Social Security Number\n• 1099 forms if you did gig work",
+          "links": []
+        },
+        {
+          "step": 2,
+          "title": "Choose Free Filing",
+          "content": "Use IRS Free File if you made less than $79,000.\nGo to: irs.gov/freefile",
+          "links": [
+            {
+              "text": "IRS Free File",
+              "url": "https://www.irs.gov/filing/free-file-do-your-federal-taxes-for-free"
+            }
+          ]
+        }
+      ],
+      "local_resources": [
+        {
+          "name": "VITA Tax Help",
+          "location": "90 State St, Albany, NY",
+          "phone": "(518) 434-4191",
+          "hours": "Feb-April, Walk-ins",
+          "cost": "FREE"
+        }
+      ]
+    },
+    {
+      "id": "credit_cards",
+      "title": "Using Credit Cards Responsibly",
+      "estimated_time": "4 min",
+      "sections": [
+        {
+          "step": 1,
+          "title": "Pay In Full Every Month",
+          "content": "Only charge what you can pay off completely when the bill comes. This builds credit without paying interest.",
+          "links": []
+        },
+        {
+          "step": 2,
+          "title": "Never Miss a Payment",
+          "content": "Set up autopay for at least the minimum. Late payments hurt your credit score for 7 years.",
+          "links": []
+        }
+      ],
+      "local_resources": [
+        {
+          "name": "SEFCU Financial Counseling",
+          "location": "Multiple Capital Region locations",
+          "phone": "(518) 452-8183",
+          "hours": "By appointment",
+          "cost": "FREE for members"
+        }
+      ]
+    }
+  ]
+}

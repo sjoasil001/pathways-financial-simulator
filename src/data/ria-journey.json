@@ -1,0 +1,274 @@
+{
+  "character_id": "ria",
+  "character_name": "Ria",
+  "starting_age": 18,
+  "starting_status": {
+    "money": 100,
+    "credit": "Not built",
+    "stress": "medium",
+    "opportunities": 2
+  },
+  "decisions": [
+    {
+      "id": "ria_d1_payout",
+      "age": 18,
+      "month": "June 2024",
+      "title": "Your First Big Payout",
+      "scenario": "You’ve been doing DoorDash around Albany/Troy and babysitting on weekends. This month was amazing: graduation parties, summer orders, and extra babysitting. Your bank app shows a total of about $1,200 coming in this month (after DoorDash fees, before taxes). You currently have $100.",
+      "context_info": "Gig income feels like a paycheck, but it isn’t. No taxes are withheld automatically, and your car (gas, oil, tires) is your income tool. A smart first move is separating money you can spend from money you’ll owe later.",
+      "choices": [
+        {
+          "id": "ria_d1_c1",
+          "label": "🎉 Treat yourself and spend most of it",
+          "immediate_outcome": {
+            "text": "You celebrate hard: new outfits, eating out, and a night out downtown. It feels worth it after grinding. You don’t track anything—just vibes.",
+            "status_changes": {
+              "money": 250,
+              "stress": "low",
+              "opportunities": 2
+            }
+          },
+          "delayed_consequence": {
+            "age": 18,
+            "month": "August 2024",
+            "months_later": 2,
+            "text": "Orders slow down and gas prices jump. Your phone bill hits, then an unexpected car expense. Your account dips negative and you get hit with fees. You start declining deliveries because it’s not even worth the gas.",
+            "why": "With gig work, income can drop fast. Without a buffer, one surprise expense turns into overdraft fees and missed payments—especially when your car costs rise.",
+            "status_changes": {
+              "money": -60,
+              "stress": "high",
+              "opportunities": 1
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "ria_d1_c2",
+          "label": "📊 Split it: 50% spend, 30% save, 20% taxes",
+          "immediate_outcome": {
+            "text": "You set up three buckets: spending, savings, and a ‘tax envelope.’ You still enjoy your money, but you don’t lose control of it.",
+            "status_changes": {
+              "money": 700,
+              "stress": "low",
+              "opportunities": 3
+            }
+          },
+          "delayed_consequence": {
+            "age": 18,
+            "month": "August 2024",
+            "months_later": 2,
+            "text": "When deliveries slow down, you’re annoyed—but not panicked. You cover your bills, keep working, and you don’t need to borrow money. You’re able to take a better opportunity when it shows up (like more reliable babysitting hours).",
+            "why": "Buffers are power. For gig workers, savings and a tax envelope reduce stress and prevent small problems from becoming expensive emergencies.",
+            "status_changes": {
+              "money": 420,
+              "stress": "medium",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "ria_d1_c3",
+          "label": "🤝 Track every delivery + ask a mentor how to do gig money",
+          "immediate_outcome": {
+            "text": "You start logging miles, gas, and earnings. A mentor tells you the cheat code: track deductions and plan for taxes early. It’s not flashy, but you feel in control.",
+            "status_changes": {
+              "money": 800,
+              "stress": "medium",
+              "opportunities": 3
+            }
+          },
+          "delayed_consequence": {
+            "age": 18,
+            "month": "August 2024",
+            "months_later": 2,
+            "text": "Because you tracked mileage and expenses, you realize which areas and times actually pay. You cut low-profit deliveries and keep more money without working more hours.",
+            "why": "Gig work is a business. Tracking expenses helps you see your true hourly rate and avoid ‘working for free.’",
+            "status_changes": {
+              "money": 520,
+              "stress": "medium",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "ria_d2_tax_season",
+      "age": 19,
+      "month": "March 2025",
+      "title": "Tax Season Surprise",
+      "scenario": "It’s tax season. You get your 1099 forms and realize you owe about $850 in self-employment taxes. Nobody warned you. You have bills due this month and you’re stressed.",
+      "context_info": "Gig income usually has no withholding. Self-employment taxes can surprise people because you’re responsible for both income tax and payroll taxes. The earlier you plan, the less painful it is.",
+      "choices": [
+        {
+          "id": "ria_d2_c1",
+          "label": "😬 Ignore it for now and deal with it later",
+          "immediate_outcome": {
+            "text": "You avoid it. You tell yourself you’ll handle it later. It feels good for a moment because you keep your cash right now.",
+            "status_changes": {
+              "money": 520,
+              "stress": "medium",
+              "opportunities": 4
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "June 2025",
+            "months_later": 3,
+            "text": "You get a scary notice and late penalties add up. Now you owe more than before and you have to scramble. You take extra deliveries, burn out, and still feel behind.",
+            "why": "Ignoring taxes can trigger penalties and interest. For inconsistent income, that turns into stress and forces you to grind harder just to catch up.",
+            "status_changes": {
+              "money": 250,
+              "stress": "high",
+              "opportunities": 2
+            },
+            "tutorial_id": "tax_filing"
+          }
+        },
+        {
+          "id": "ria_d2_c2",
+          "label": "💳 Pay it with a credit card to stop the stress",
+          "immediate_outcome": {
+            "text": "You pay it off with a credit card. The relief is immediate: no scary notices. But now you’re carrying a balance.",
+            "status_changes": {
+              "money": 450,
+              "credit": "Building",
+              "stress": "medium",
+              "opportunities": 3
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "June 2025",
+            "months_later": 3,
+            "text": "Interest starts piling up. You miss one payment during a slow month and your score drops. You feel trapped because you’re working to pay interest instead of building savings.",
+            "why": "Credit cards can help in emergencies, but high interest makes problems bigger if you don’t have a payoff plan—especially with variable income.",
+            "status_changes": {
+              "money": 180,
+              "credit": "Damaged (580)",
+              "stress": "high",
+              "opportunities": 2
+            },
+            "tutorial_id": "credit_cards"
+          }
+        },
+        {
+          "id": "ria_d2_c3",
+          "label": "📄 Learn gig taxes + set up a plan (even if it’s smaller payments)",
+          "immediate_outcome": {
+            "text": "You learn the basics: deductions, mileage, and setting aside money per week. You create a plan and stop guessing. It’s not fun, but it’s empowering.",
+            "status_changes": {
+              "money": 420,
+              "stress": "medium",
+              "opportunities": 4
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "June 2025",
+            "months_later": 3,
+            "text": "You file correctly and reduce what you owe by tracking deductions. You don’t love paying taxes, but it’s controlled—no panic. You start thinking bigger about stable income options.",
+            "why": "Understanding deductions and planning weekly reduces the ‘tax shock’ that traps a lot of young gig workers.",
+            "status_changes": {
+              "money": 300,
+              "credit": "Fair (640)",
+              "stress": "medium",
+              "opportunities": 5
+            },
+            "tutorial_id": "tax_filing"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ria_d3_car_breakdown",
+      "age": 20,
+      "month": "October 2025",
+      "title": "Car = Your Income",
+      "scenario": "Your car starts making a terrible noise. A mechanic quotes $600 for repairs. Without your car, your DoorDash income drops to almost zero. You need a decision today.",
+      "context_info": "For gig workers, car costs aren’t optional. Repairs, maintenance, and insurance are part of your ‘business.’ The best outcomes usually come from avoiding panic decisions (like high-interest debt) and building an emergency fund specifically for car costs.",
+      "choices": [
+        {
+          "id": "ria_d3_c1",
+          "label": "🛠️ Pay cash from savings and fix it immediately",
+          "immediate_outcome": {
+            "text": "You pay from savings. It hurts to watch the money go, but you’re back on the road and earning again within a day.",
+            "status_changes": {
+              "money": -50,
+              "stress": "medium",
+              "opportunities": 5
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "January 2026",
+            "months_later": 3,
+            "text": "Because you solved it fast, you keep your income steady. But you learned a hard lesson: you need a dedicated car emergency fund so one repair doesn’t wipe you out.",
+            "why": "Savings prevents you from paying interest, but you still need to rebuild buffers so your next surprise doesn’t become a crisis.",
+            "status_changes": {
+              "money": 220,
+              "stress": "medium",
+              "opportunities": 5
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "ria_d3_c2",
+          "label": "💳 Put the repair on a credit card and keep driving",
+          "immediate_outcome": {
+            "text": "You put it on a credit card. You’re relieved because you can keep working, but now you’ve added a big monthly payment to your life.",
+            "status_changes": {
+              "money": 180,
+              "credit": "Building",
+              "stress": "medium",
+              "opportunities": 4
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "January 2026",
+            "months_later": 3,
+            "text": "During a slow month, you can’t pay the full balance. Interest hits and your score takes a small hit. You start feeling like you’re running in place.",
+            "why": "Debt can keep you afloat short-term, but variable income makes consistent repayment harder—interest punishes inconsistency.",
+            "status_changes": {
+              "money": 60,
+              "credit": "Fair (630)",
+              "stress": "high",
+              "opportunities": 3
+            },
+            "tutorial_id": "credit_cards"
+          }
+        },
+        {
+          "id": "ria_d3_c3",
+          "label": "🔍 Get a second quote + cut low-profit deliveries going forward",
+          "immediate_outcome": {
+            "text": "You shop around and find a lower quote. You also decide to stop taking deliveries that don’t meet your minimum profit after gas. You treat this like a business now.",
+            "status_changes": {
+              "money": 120,
+              "stress": "medium",
+              "opportunities": 5
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "January 2026",
+            "months_later": 3,
+            "text": "You earn slightly less per day but keep more per hour. You rebuild savings steadily and feel less stressed because you’re not burning out for tiny profits.",
+            "why": "The goal isn’t just working more—it’s keeping more. Profit rules + expense tracking protects gig workers from ‘invisible losses.’",
+            "status_changes": {
+              "money": 260,
+              "credit": "Fair (650)",
+              "stress": "medium",
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    }
+  ]
+}

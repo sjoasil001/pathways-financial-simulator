@@ -1,0 +1,232 @@
+{
+  "character_id": "casey",
+  "character_name": "Casey",
+  "starting_age": 17,
+  "starting_status": {
+    "money": 0,
+    "credit": "Not built",
+    "stress": "high",
+    "opportunities": 1
+  },
+  "decisions": [
+    {
+      "id": "decision_1",
+      "age": 17,
+      "month": "July 2024",
+      "title": "Multiple Jobs Strategy",
+      "scenario": "You're working three part-time jobs: Stewart's (20hrs), Price Chopper (15hrs), DoorDash (10hrs). Total: $580/week. You're exhausted. A friend says their uncle can get you one full-time warehouse job at $18/hr ($720/week) with benefits.",
+      "context_info": "Multiple part-time jobs mean no benefits, inconsistent schedules, and burnout. One full-time job offers stability, benefits, and more free time - but less flexibility.",
+      "choices": [
+        {
+          "id": "choice_1a",
+          "label": "✅ Take the warehouse job, quit the others",
+          "immediate_outcome": {
+            "text": "You quit all three jobs and started at the warehouse. You work 40 hours/week, same schedule every week. You have health insurance for the first time. Weekends are free.",
+            "status_changes": {
+              "money": 720
+            }
+          },
+          "delayed_consequence": {
+            "age": 18,
+            "month": "March 2025",
+            "months_later": 8,
+            "text": "You've saved $4,200 because you stopped eating out from exhaustion. You got promoted to forklift operator (+$2/hr). You enrolled in HVCC part-time using tuition reimbursement. Your stress is way down.",
+            "why": "One stable job with benefits is better than multiple unstable jobs. The consistency let you plan, save, and invest in education. Your hourly rate was higher and you got benefits worth $400/month.",
+            "status_changes": {
+              "money": 4200,
+              "credit": "Building",
+              "stress": "low",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_1b",
+          "label": "💪 Keep all three jobs, grind harder",
+          "immediate_outcome": {
+            "text": "You're keeping all three jobs. The flexibility lets you work whenever you want. You're making $580/week but the schedule is chaotic.",
+            "status_changes": {
+              "money": 580
+            }
+          },
+          "delayed_consequence": {
+            "age": 18,
+            "month": "March 2025",
+            "months_later": 8,
+            "text": "You got sick and couldn't work for a week - lost $580. No health insurance meant the urgent care visit cost $250. You're burned out. You've saved nothing because you're too tired to cook and eat out constantly. You have $0 in savings.",
+            "why": "The grind seemed noble but wasn't sustainable. No benefits, no consistency, and exhaustion led to expensive habits. You worked harder but ended up with less.",
+            "status_changes": {
+              "money": -250,
+              "credit": "Not built",
+              "stress": "very high",
+              "opportunities": 1
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_2",
+      "age": 19,
+      "month": "November 2025",
+      "title": "Transportation Decision",
+      "scenario": "Your car died. You need transportation to get to work in Latham from Schenectady. Options: (1) Buy a $3,000 beater car, might need repairs. (2) Get a $15,000 car loan. (3) Use CDTA bus + Uber when needed (~$200/month).",
+      "context_info": "Transportation is often the second-biggest expense after housing. In the Capital Region, cars feel necessary, but they're expensive. Insurance, gas, maintenance, and payments add up fast.",
+      "choices": [
+        {
+          "id": "choice_2a",
+          "label": "🚗 Buy $3k beater with cash",
+          "immediate_outcome": {
+            "text": "You bought a 2009 Corolla for $3,000 cash. It runs fine but needs some TLC. You paid $150/month for insurance.",
+            "status_changes": {
+              "money": -3000
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "November 2026",
+            "months_later": 12,
+            "text": "You spent $800 on repairs this year but the car is reliable now. Total cost: $3,800 + $1,800 insurance = $5,600. You own it outright. No payments means you could save $200/month for emergencies.",
+            "why": "Cheap cars have higher maintenance but no payments. Over time, you spent less than a car payment would cost, and you own the car. Kept your costs low so you could build savings.",
+            "status_changes": {
+              "money": -5600,
+              "stress": "medium",
+              "opportunities": 3
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_2b",
+          "label": "🚙 Get a $15k car loan",
+          "immediate_outcome": {
+            "text": "You financed $15,000 at 9% (your credit isn't great). Your payment is $311/month for 5 years. The car is nice - a 2019 Nissan.",
+            "status_changes": {
+              "money": -311
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "November 2026",
+            "months_later": 12,
+            "text": "You've paid $3,732 so far and still owe $12,800. The car is worth $11,000 (depreciated). You're underwater. You also pay $180/month insurance because it's a newer car. Total: $491/month. You can't save anything.",
+            "why": "Car payments on a depreciating asset means you're always behind. The $311/month locked you into a 5-year commitment. When unexpected expenses hit, you had no flexibility.",
+            "status_changes": {
+              "money": -3732,
+              "credit": "Fair (630)",
+              "stress": "very high",
+              "opportunities": 1
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_2c",
+          "label": "🚌 Use bus + Uber combo",
+          "immediate_outcome": {
+            "text": "You got a CDTA monthly pass ($60) and use Uber when the bus doesn't work (~$140/month). Total: $200/month. Takes longer but it works.",
+            "status_changes": {
+              "money": -200
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "November 2026",
+            "months_later": 12,
+            "text": "You spent $2,400 on transportation this year. It's inconvenient but cheap. You saved $3,200 compared to having a car. You used that money to move to an apartment near the bus line in downtown Albany, cutting commute time.",
+            "why": "Living without a car in the Capital Region is hard but possible if you plan around transit. The savings let you optimize for location instead. Not perfect but financially smart short-term.",
+            "status_changes": {
+              "money": 800,
+              "stress": "medium",
+              "opportunities": 3
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_3",
+      "age": 21,
+      "month": "June 2027",
+      "title": "Housing Choice",
+      "scenario": "You're making $22/hr now ($3,520/month after taxes). You want to move out. Options: (1) Studio in Schenectady $750/month. (2) Nice 1BR in Troy $1,200/month. (3) Stay with parents, save aggressively.",
+      "context_info": "The 30% rule says spend no more than 30% of income on housing. At $3,520/month, that's $1,056. But living with parents is free - you can save thousands.",
+      "choices": [
+        {
+          "id": "choice_3a",
+          "label": "🏠 Schenectady studio ($750)",
+          "immediate_outcome": {
+            "text": "You got a studio in Schenectady. $750/month + $100 utilities = $850/month (24% of income). It's not fancy but it's yours. Independence feels amazing.",
+            "status_changes": {
+              "money": -850
+            }
+          },
+          "delayed_consequence": {
+            "age": 23,
+            "month": "June 2029",
+            "months_later": 24,
+            "text": "You've spent $20,400 on rent over 2 years. You've saved $8,000 because the low rent kept your costs down. You have enough for a down payment on a starter condo in Schenectady ($5,000 down on a $75k place).",
+            "why": "Living below your means in affordable housing let you save. The modest rent meant you could still build wealth. Your 23-year-old self is positioned to buy property.",
+            "status_changes": {
+              "money": 8000,
+              "stress": "low",
+              "opportunities": 5
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_3b",
+          "label": "✨ Troy 1BR ($1,200)",
+          "immediate_outcome": {
+            "text": "You got a beautiful 1BR in downtown Troy. $1,200/month + $150 utilities = $1,350/month (38% of income). It's gorgeous but tight financially.",
+            "status_changes": {
+              "money": -1350
+            }
+          },
+          "delayed_consequence": {
+            "age": 23,
+            "month": "June 2029",
+            "months_later": 24,
+            "text": "You've spent $32,400 on rent over 2 years. You've saved $0 - the high rent ate all discretionary income. When your car needed $1,200 in repairs, you had to put it on a credit card. You're broke in a nice apartment.",
+            "why": "Spending 38% of income on rent (above the 30% rule) meant no money for emergencies or savings. The nice apartment cost you financial flexibility and future opportunities.",
+            "status_changes": {
+              "money": -32400,
+              "credit": "Fair (640)",
+              "stress": "very high",
+              "opportunities": 1
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_3c",
+          "label": "🏡 Stay with parents, save hard",
+          "immediate_outcome": {
+            "text": "You're staying with your parents. You pay them $300/month to help with bills. Your independence is delayed but your wallet is happy.",
+            "status_changes": {
+              "money": -300
+            }
+          },
+          "delayed_consequence": {
+            "age": 23,
+            "month": "June 2029",
+            "months_later": 24,
+            "text": "You've paid parents $7,200 over 2 years. You've saved $28,000. You bought a condo in Schenectady ($75k, $15k down, mortgage $520/month). You now own property at 23. Your monthly payment is less than rent, and you're building equity.",
+            "why": "Delaying gratification (independence) for 2 years let you build $28k savings. You used it to buy property young, which compounds wealth over decades. Hard choice, big reward.",
+            "status_changes": {
+              "money": 28000,
+              "credit": "Good (710)",
+              "stress": "low",
+              "opportunities": 7
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    }
+  ]
+}

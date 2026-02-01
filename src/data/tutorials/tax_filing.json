@@ -1,0 +1,62 @@
+{
+  "tutorial_id": "tax_filing",
+  "title": "How to File Taxes",
+  "subtitle": "Step-by-step guide for the Capital Region",
+  "estimated_time": "5 minutes to learn, 30 minutes to file",
+  "sections": [
+    {
+      "step": 1,
+      "title": "Gather Your Documents",
+      "content": "Before you start, collect:\n\n✓ W-2 form (from your employer) - arrives in January\n✓ Social Security Number\n✓ Bank account info (for direct deposit refund)\n\nIf you did gig work (DoorDash, Uber, freelance):\n✓ 1099 forms (companies send if you made $600+)"
+    },
+    {
+      "step": 2,
+      "title": "Choose Your Free Filing Method",
+      "content": "For Capital Region youth making under $73,000:\n\nIRS Free File (100% free)\n→ irs.gov/freefile\n→ Works for simple tax situations\n\nCash App Taxes (free, mobile-friendly)\n→ cash.app/taxes\n→ Great for W-2 only filers\n\nVITA Tax Help (free in-person help)\n→ Location: 90 State Street, Albany\n→ Phone: (518) 434-4582\n→ Open Feb–April, walk-ins welcome\n→ Bring: W-2, ID, Social Security card"
+    },
+    {
+      "step": 3,
+      "title": "Enter Your Information",
+      "content": "The software walks you through four simple sections:\n\n1. Personal Information\n- Name, address, Social Security Number\n- Filing status (usually \"Single\")\n\n2. Income\n- Enter numbers from your W-2 Box 1\n- The software does the math\n\n3. Deductions\n- Most youth take the Standard Deduction ($13,850)\n- Select \"Standard\" and continue\n\n4. Credits\n- Software checks eligibility automatically\n- Earned Income Credit if you made under $17k\n- Education credits if you are in college"
+    },
+    {
+      "step": 4,
+      "title": "Review and Submit",
+      "content": "Before you file:\n✓ Double-check your Social Security Number\n✓ Verify your bank account for refund\n✓ Confirm income matches your W-2\n\nThen click \"E-File\".\n\nWhat happens next:\n• Confirmation email within 24 hours\n• Refund in 2–3 weeks (if owed)\n• No further action required until next year"
+    }
+  ],
+  "local_resources": [
+    {
+      "name": "VITA Tax Help Albany",
+      "description": "Free in-person tax filing assistance",
+      "address": "90 State Street, Albany, NY 12207",
+      "phone": "(518) 434-4582",
+      "hours": "February–April: Mon–Fri 10am–7pm, Sat 9am–2pm"
+    },
+    {
+      "name": "SEFCU Financial Counseling",
+      "description": "Free tax preparation guidance for members",
+      "phone": "(518) 464-6000",
+      "website": "https://www.sefcu.com/financial-wellness"
+    },
+    {
+      "name": "Albany Public Library",
+      "description": "Free computer access and tax forms",
+      "address": "161 Washington Ave, Albany, NY",
+      "notes": "Staff cannot give tax advice but can help locate resources"
+    }
+  ],
+  "key_takeaways": [
+    "Filing is free if you make under $73,000 — never pay for tax software",
+    "The IRS already receives your income information from your W-2",
+    "Penalties increase if you do not file on time, even if you cannot pay",
+    "Most first-time workers receive refunds, not tax bills",
+    "Local, free help is available through VITA in Albany"
+  ],
+  "next_steps": [
+    "Save this guide for next tax season",
+    "Set a phone reminder for January 31 to look for your W-2",
+    "If you owe money and cannot pay, file anyway and set up a payment plan",
+    "Visit SEFCU for free financial counseling if needed"
+  ]
+}

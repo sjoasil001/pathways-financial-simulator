@@ -1,0 +1,259 @@
+{
+  "character_id": "noor",
+  "character_name": "Noor",
+  "starting_age": 19,
+  "starting_status": {
+    "money": 0,
+    "credit": "Not built",
+    "stress": "very high",
+    "opportunities": 2
+  },
+  "decisions": [
+    {
+      "id": "decision_1",
+      "age": 19,
+      "month": "March 2025",
+      "title": "Family Emergency vs. Personal Savings",
+      "scenario": "You work full-time at Price Chopper making $16.50/hr ($2,640/month after taxes). You've saved $1,200 for community college tuition. Your mom just got her hours cut at the hospital - the family is $800 short on rent this month. Your younger siblings need you.",
+      "context_info": "Many young adults from immigrant or working-class families face this: help family now or invest in education that could help everyone later. There's no easy answer, but there are resources that can help both.",
+      "choices": [
+        {
+          "id": "choice_1a",
+          "label": "❤️ Give family the $800, delay college",
+          "immediate_outcome": {
+            "text": "You gave your mom $800. Rent is covered. Your family is stable this month. You'll start college next semester instead. Your mom cried and thanked you.",
+            "status_changes": {
+              "money": 400
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "September 2025",
+            "months_later": 6,
+            "text": "You delayed college for 6 months. Your mom's hours recovered but another crisis hit (car repair $600). You gave another $400. You've now delayed college a full year. Your savings: $0. You're stuck in the same cycle as your parents - working hard but never getting ahead.",
+            "why": "Helping family feels right but without addressing the root problem (unstable income, no emergency fund, no financial literacy), you'll keep having emergencies. You can't pour from an empty cup - you need to build stability to help long-term.",
+            "status_changes": {
+              "money": 0,
+              "credit": "Not built",
+              "stress": "very high",
+              "opportunities": 1
+            },
+            "tutorial_id": "family_finances"
+          }
+        },
+        {
+          "id": "choice_1b",
+          "label": "🎓 Keep savings, help family find resources",
+          "immediate_outcome": {
+            "text": "You kept your college money but spent the weekend researching help. You found: Catholic Charities emergency rent assistance, and helped your mom apply for NYS Emergency Rental Assistance Program (ERAP). You contributed $200 to show you're helping.",
+            "status_changes": {
+              "money": 1000
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "September 2025",
+            "months_later": 6,
+            "text": "Catholic Charities covered $600 of the rent gap. You started at HVCC (used your $1,000 + aid). You're taking business classes and teaching your mom budgeting skills you learned. The family applied for SNAP benefits ($450/month in grocery help). You helped them ACCESS resources instead of just giving money. Everyone is more stable.",
+            "why": "Teaching someone to fish vs giving them a fish. You helped your family access the social safety net that exists for exactly this situation. Now you're in college AND your family has sustainable support systems.",
+            "status_changes": {
+              "money": 1000,
+              "credit": "Building",
+              "stress": "medium",
+              "opportunities": 5
+            },
+            "tutorial_id": "family_finances"
+          }
+        },
+        {
+          "id": "choice_1c",
+          "label": "🤝 Split the difference + set boundaries",
+          "immediate_outcome": {
+            "text": "You gave $400 toward rent and kept $800 for college. You sat down with your mom and made a plan: you'll help with $200/month max, but she needs to build an emergency fund too. You're starting college part-time (2 classes).",
+            "status_changes": {
+              "money": 800
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "September 2025",
+            "months_later": 6,
+            "text": "You've given $1,200 to family over 6 months ($200/month as agreed). You started HVCC part-time. It's slower but you're making progress. Your mom started saving $50/month - she's building her first emergency fund. You set a boundary and stuck to it. Everyone is adapting.",
+            "why": "Boundaries aren't selfish - they're sustainable. You helped family AND invested in yourself. The $200/month limit forced your family to find other solutions (they got on SNAP, your mom got a side gig). You modeled financial responsibility.",
+            "status_changes": {
+              "money": 800,
+              "credit": "Building",
+              "stress": "medium",
+              "opportunities": 4
+            },
+            "tutorial_id": "family_finances"
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_2",
+      "age": 20,
+      "month": "November 2026",
+      "title": "Healthcare Coverage Gap",
+      "scenario": "You're working 35 hours/week at Price Chopper (just under full-time so they don't have to give you benefits). You have no health insurance. You need to see a dentist (tooth pain) and it'll cost $180 without insurance. Your paycheck this week is $520.",
+      "context_info": "Many young adults working retail/service jobs are stuck in the 'benefits gap' - too many hours to qualify for Medicaid easily, but not enough for employer coverage. NYS has options specifically for this situation.",
+      "choices": [
+        {
+          "id": "choice_2a",
+          "label": "😣 Ignore tooth pain, can't afford it",
+          "immediate_outcome": {
+            "text": "You're taking ibuprofen and hoping it goes away. The pain is manageable for now. You kept your $520 paycheck for bills.",
+            "status_changes": {
+              "money": 520
+            }
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "February 2027",
+            "months_later": 3,
+            "text": "The tooth got infected. You ended up in the ER at Albany Med with a dental abscess. ER bill: $2,400. They had to extract the tooth ($800 more). Total: $3,200. You're on a payment plan paying $150/month. That $180 cleaning became a $3,200 disaster.",
+            "why": "Preventive care is always cheaper than emergency care. Dental problems don't heal themselves - they get worse and more expensive. You saved $180 and lost $3,200.",
+            "status_changes": {
+              "money": -3200,
+              "credit": "Damaged (600)",
+              "stress": "very high",
+              "opportunities": 1
+            },
+            "tutorial_id": "healthcare_access"
+          }
+        },
+        {
+          "id": "choice_2b",
+          "label": "🏥 Go to Whitney M. Young Jr. Health Center",
+          "immediate_outcome": {
+            "text": "You went to Whitney Young Health Center on South Pearl St in Albany. They use a sliding scale based on income. Your visit + cleaning cost $40. They told you about NY State of Health (insurance marketplace) and helped you apply.",
+            "status_changes": {
+              "money": 480
+            }
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "February 2027",
+            "months_later": 3,
+            "text": "You got enrolled in Essential Plan (NYS health insurance for people making $28k-$32k/year). It costs $20/month and covers medical, dental, and vision. Your tooth got fixed for $20 copay. You've seen a doctor for the first time in years (free physical). Having insurance gives you peace of mind.",
+            "why": "Community Health Centers exist specifically for uninsured/underinsured people. They helped you access Essential Plan - insurance designed for working people in the benefits gap. You now have coverage for $20/month.",
+            "status_changes": {
+              "money": -40,
+              "credit": "Building",
+              "stress": "low",
+              "opportunities": 5
+            },
+            "tutorial_id": "healthcare_access"
+          }
+        },
+        {
+          "id": "choice_2c",
+          "label": "💰 Pay the $180, go to regular dentist",
+          "immediate_outcome": {
+            "text": "You went to a dentist on Central Ave and paid $180 cash. The cleaning is done, tooth pain is gone. You have $340 left from your paycheck.",
+            "status_changes": {
+              "money": 340
+            }
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "February 2027",
+            "months_later": 3,
+            "text": "Your tooth is fine but you're still uninsured. When you got the flu and needed to see a doctor, the urgent care visit cost $150. You paid it but you're realizing healthcare costs are unpredictable and expensive. You have no safety net for the next medical issue.",
+            "why": "You solved the immediate problem but didn't address the systemic issue - you have no health insurance. Each medical event costs hundreds. You need coverage, not just one-time fixes.",
+            "status_changes": {
+              "money": -150,
+              "credit": "Not built",
+              "stress": "high",
+              "opportunities": 3
+            },
+            "tutorial_id": "healthcare_access"
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_3",
+      "age": 21,
+      "month": "June 2027",
+      "title": "Education Path Decision",
+      "scenario": "You've been working at Price Chopper for 3 years. You're 21, making $17.50/hr, living with family. You want more but community college is $2,500/semester. You found out about: (1) Excelsior Scholarship (free SUNY/CUNY tuition if you stay in NY after), (2) Workforce development programs (free training in high-demand fields), (3) Keep working, take one class at a time.",
+      "context_info": "NYS has specific programs for working adults from low-income backgrounds to access education and training. Many people don't know these exist and assume college is impossible.",
+      "choices": [
+        {
+          "id": "choice_3a",
+          "label": "🎓 Apply for Excelsior Scholarship, go full-time",
+          "immediate_outcome": {
+            "text": "You applied for Excelsior Scholarship + TAP + Pell Grants. Combined, they cover ALL of HVCC's tuition plus give you $1,200/semester for books/expenses. You're going full-time in the fall. You'll work 15hrs/week to cover living costs.",
+            "status_changes": {
+              "money": 1200
+            }
+          },
+          "delayed_consequence": {
+            "age": 23,
+            "month": "May 2029",
+            "months_later": 23,
+            "text": "You graduated from HVCC with an Associate's in Business - completely debt-free thanks to Excelsior + TAP + Pell. You got a job at an insurance company in Albany making $42,000/year. You're helping your family MORE now because you're earning more. You just signed your first apartment lease.",
+            "why": "Excelsior Scholarship + TAP + Pell Grants made college FREE for you. You qualified because your family makes under $125k. You invested 2 years and came out with a degree, no debt, and doubled your income. You broke the cycle.",
+            "status_changes": {
+              "money": 42000,
+              "credit": "Good (710)",
+              "stress": "low",
+              "opportunities": 8
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_3b",
+          "label": "🔧 Enroll in Capital Region BOCES career training",
+          "immediate_outcome": {
+            "text": "You enrolled in BOCES Adult Practical Nursing program (11 months, evenings). It's FREE through workforce development grants. You'll become an LPN. You're keeping your Price Chopper job during training.",
+            "status_changes": {
+              "money": 0
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "May 2028",
+            "months_later": 11,
+            "text": "You're now a Licensed Practical Nurse working at St. Peter's Hospital making $52,000/year with full benefits. The training was completely free. You went from $17.50/hr retail to $25/hr healthcare in 11 months. Your family is so proud. You're buying a car.",
+            "why": "Career training programs through BOCES are designed exactly for working adults like you. They're free or low-cost and lead directly to jobs. You didn't need a 4-year degree - you needed skills training. You got it and tripled your income.",
+            "status_changes": {
+              "money": 52000,
+              "credit": "Good (700)",
+              "stress": "medium",
+              "opportunities": 7
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_3c",
+          "label": "💼 Keep working, take 1 class per semester",
+          "immediate_outcome": {
+            "text": "You're taking 1 class per semester at HVCC ($800/class after aid). You're working full-time. It's slow but manageable. You're paying as you go - no debt.",
+            "status_changes": {
+              "money": -800
+            }
+          },
+          "delayed_consequence": {
+            "age": 25,
+            "month": "May 2031",
+            "months_later": 47,
+            "text": "You're halfway through your Associate's degree (30 credits out of 60). You've spent 4 years and $6,400. You're still at Price Chopper making $19/hr. Your friends who did Excelsior or BOCES are making $42k-52k. You played it safe but it's costing you opportunity and time.",
+            "why": "Going slow feels safer but has huge opportunity costs. You spent 4 years making $17-19/hr when you could have spent 1-2 years training and been making $42k-52k for the past 2-3 years. Sometimes the 'safe' path is actually the expensive path.",
+            "status_changes": {
+              "money": -6400,
+              "credit": "Building",
+              "stress": "high",
+              "opportunities": 3
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    }
+  ]
+}

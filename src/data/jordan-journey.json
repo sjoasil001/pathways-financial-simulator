@@ -1,0 +1,205 @@
+{
+  "character_id": "jordan",
+  "character_name": "Jordan",
+  "starting_age": 19,
+  "starting_status": {
+    "money": 150,
+    "credit": "Not built",
+    "stress": "medium",
+    "opportunities": 3
+  },
+  "decisions": [
+    {
+      "id": "decision_1",
+      "age": 19,
+      "month": "September 2024",
+      "title": "Work-Study Balance",
+      "scenario": "You're taking 15 credits at HVCC and working 25 hours/week at Target. Your manager just offered you full-time hours at $16/hr, but it conflicts with your Tuesday/Thursday classes.",
+      "context_info": "Working full-time while in school can earn you more money now, but might delay your degree. Community college students who work over 20 hours have lower graduation rates.",
+      "choices": [
+        {
+          "id": "choice_1a",
+          "label": "📚 Keep school schedule, decline extra hours",
+          "immediate_outcome": {
+            "text": "You kept your Tuesday/Thursday classes. Your income stays the same at around $400/week part-time.",
+            "status_changes": {
+              "money": 400
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "May 2025",
+            "months_later": 8,
+            "text": "You finished your first year with good grades (3.4 GPA). You qualified for a scholarship that covers $1,500 of next year's tuition. Your manager respects your commitment to school.",
+            "why": "Staying focused on school kept your grades up, which opened doors to financial aid. Employers value dedication even when you say no.",
+            "status_changes": {
+              "money": 1500,
+              "stress": "low",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_1b",
+          "label": "💰 Take full-time hours, drop Thursday classes",
+          "immediate_outcome": {
+            "text": "You're now working 40 hours/week at $16/hr. Your paychecks are about $640/week after taxes. Feels good to have money.",
+            "status_changes": {
+              "money": 640
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "May 2025",
+            "months_later": 8,
+            "text": "You made good money but failed two classes from exhaustion. You need to retake them in summer ($800 each). Your degree is now delayed by a year. Total cost: $1,600 extra + lost time.",
+            "why": "Working full-time while in school seems smart for money now, but failing classes costs more in the long run. You paid twice for the same education.",
+            "status_changes": {
+              "money": -1600,
+              "credit": "Not built",
+              "stress": "very high",
+              "opportunities": 2
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_1c",
+          "label": "🤝 Negotiate: Work weekends only, keep classes",
+          "immediate_outcome": {
+            "text": "You proposed working Friday-Sunday full shifts. Your manager agreed! You'll work 24 hours on weekends at $17/hr (weekend differential).",
+            "status_changes": {
+              "money": 408
+            }
+          },
+          "delayed_consequence": {
+            "age": 20,
+            "month": "May 2025",
+            "months_later": 8,
+            "text": "You finished the year with a 3.2 GPA and consistent income. You're tired on weekends, but you protected your education. Your manager promoted you to weekend supervisor (+$1/hr raise).",
+            "why": "Negotiating showed maturity. You found a solution that met both needs. Employers respect problem-solvers.",
+            "status_changes": {
+              "money": 500,
+              "stress": "medium",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_2",
+      "age": 20,
+      "month": "September 2025",
+      "title": "Student Loans",
+      "scenario": "Your financial aid doesn't cover everything. You need $3,000 for next year's tuition. You can take federal student loans at 5% interest, or put it on a credit card at 22% interest to 'build credit.'",
+      "context_info": "Student loans have lower interest rates and don't require payments until after graduation. Credit cards charge much higher interest and require monthly payments immediately.",
+      "choices": [
+        {
+          "id": "choice_2a",
+          "label": "📚 Take federal student loan (5% interest)",
+          "immediate_outcome": {
+            "text": "You filled out the loan paperwork. The $3,000 is deposited directly to HVCC. No payments due until 6 months after graduation.",
+            "status_changes": {}
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "June 2027",
+            "months_later": 21,
+            "text": "You graduated! Your loan balance is $3,158 (original $3,000 + interest during school). Your monthly payment will be $35/month for 10 years. Manageable on your new salary.",
+            "why": "Federal loans have low rates and don't require payments during school. You used debt wisely for education that increased your earning power.",
+            "status_changes": {
+              "money": -3158,
+              "credit": "Good (700)",
+              "stress": "low",
+              "opportunities": 5
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_2b",
+          "label": "💳 Put it on credit card to build credit",
+          "immediate_outcome": {
+            "text": "You charged $3,000 to your new credit card. The school got paid. Your minimum payment is $90/month.",
+            "status_changes": {
+              "money": -90
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "June 2027",
+            "months_later": 21,
+            "text": "You've been making minimum payments. Your balance is now $4,200 (original $3,000 + $1,200 interest). You're paying $90/month but the balance barely moves. This will take 6 years to pay off at this rate.",
+            "why": "Credit cards are the most expensive way to pay for education. The 22% interest meant you paid $1,200 extra for the same tuition. Student loans would have cost $158 extra.",
+            "status_changes": {
+              "money": -4200,
+              "credit": "Fair (650)",
+              "stress": "very high",
+              "opportunities": 2
+            },
+            "tutorial_id": "credit_cards"
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_3",
+      "age": 21,
+      "month": "December 2026",
+      "title": "Emergency Fund",
+      "scenario": "You got a $800 holiday bonus from Target. Your friends want to split an Airbnb in Montreal for New Year's ($200/person). You also need new tires ($400). You have $50 in savings.",
+      "context_info": "Emergency funds protect you from unexpected costs. Financial experts recommend 3-6 months of expenses saved, but even $500 helps avoid debt when surprises happen.",
+      "choices": [
+        {
+          "id": "choice_3a",
+          "label": "🎉 Go to Montreal, deal with tires later",
+          "immediate_outcome": {
+            "text": "Montreal was amazing! You spent $200 on the trip plus $150 on meals/drinks. You have $450 left from your bonus.",
+            "status_changes": {
+              "money": 450
+            }
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "January 2027",
+            "months_later": 1,
+            "text": "You got a flat tire driving to work. Your tires were too worn to patch it safely. You needed all 4 tires ($400) plus towing ($75). You had to put $25 on a credit card. Now you're stressed about that payment.",
+            "why": "Fun now, stress later. If you'd handled the need (tires) before the want (trip), you'd have saved the towing cost and avoided credit card debt.",
+            "status_changes": {
+              "money": -475,
+              "stress": "high",
+              "opportunities": 3
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_3b",
+          "label": "🚗 Get tires, skip Montreal",
+          "immediate_outcome": {
+            "text": "You got 4 new tires ($400). Your car is safe and reliable. You have $400 left from your bonus. Your friends are disappointed but understand.",
+            "status_changes": {
+              "money": 400
+            }
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "March 2027",
+            "months_later": 3,
+            "text": "Your car has been reliable. You saved that $400 and added another $200 from paychecks. You now have $600 in emergency savings. When your laptop died, you could afford to fix it ($150) without stress.",
+            "why": "Handling needs before wants builds security. You avoided debt, kept your car safe, and started an emergency fund that saved you when the next surprise hit.",
+            "status_changes": {
+              "money": 450,
+              "stress": "low",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    }
+  ]
+}

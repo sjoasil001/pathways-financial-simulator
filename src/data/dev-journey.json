@@ -1,0 +1,259 @@
+{
+  "character_id": "dev",
+  "character_name": "Dev",
+  "starting_age": 20,
+  "starting_status": {
+    "money": -5000,
+    "credit": "Not built",
+    "stress": "high",
+    "opportunities": 3
+  },
+  "decisions": [
+    {
+      "id": "decision_1",
+      "age": 20,
+      "month": "August 2026",
+      "title": "Student Loan Decision",
+      "scenario": "You're starting your junior year at SUNY Albany. After scholarships and aid, you still need $8,000 for tuition and living expenses. You can: take federal loans (4.5% interest), take private loans (9% interest), or work full-time and do school part-time.",
+      "context_info": "Federal student loans have lower interest rates, flexible repayment, and don't require payments until after graduation. Private loans are more expensive and less flexible. Working full-time delays graduation but avoids debt.",
+      "choices": [
+        {
+          "id": "choice_1a",
+          "label": "📚 Take federal student loans ($8,000)",
+          "immediate_outcome": {
+            "text": "You accepted $8,000 in federal loans. The money is deposited to your student account. You can focus on school full-time. No payments due until 6 months after graduation.",
+            "status_changes": {
+              "money": -8000
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "May 2028",
+            "months_later": 21,
+            "text": "You graduated on time! Your total loan balance is $28,500 (from all 4 years). With federal loans at 4.5%, your monthly payment will be $294 for 10 years. You got a job in Albany making $52,000 - you can manage the payments.",
+            "why": "Federal loans allowed you to focus on school and graduate on time. The low interest rate and income-driven repayment options make them manageable. You invested in education that increased your earning power.",
+            "status_changes": {
+              "money": -28500,
+              "credit": "Good (690)",
+              "stress": "medium",
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_1b",
+          "label": "💳 Take private loans (9% interest)",
+          "immediate_outcome": {
+            "text": "You got approved for $8,000 in private loans through a bank. Higher interest rate but you got the money. School is covered.",
+            "status_changes": {
+              "money": -8000
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "May 2028",
+            "months_later": 21,
+            "text": "You graduated, but your private loans ($28,500 total at 9%) have payments of $361/month - $67 more per month than federal would have been. Over 10 years, you'll pay $14,800 MORE in interest. You're struggling to afford rent.",
+            "why": "Private loans cost significantly more than federal loans. The higher interest rate means thousands more paid over the life of the loan. Federal loans also have better protections if you lose your job.",
+            "status_changes": {
+              "money": -28500,
+              "credit": "Fair (650)",
+              "stress": "very high",
+              "opportunities": 3
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_1c",
+          "label": "💼 Work full-time, school part-time (no loans)",
+          "immediate_outcome": {
+            "text": "You got a full-time job at Target making $17/hr ($2,720/month after taxes). You're taking 2 classes per semester. It's exhausting but you're avoiding debt.",
+            "status_changes": {
+              "money": 2720
+            }
+          },
+          "delayed_consequence": {
+            "age": 24,
+            "month": "December 2030",
+            "months_later": 52,
+            "text": "You finally graduated - 2 years late. You avoided $28,500 in loans but spent 2 extra years at lower wages. Your friends who borrowed graduated at 22 and have been earning $52k for 2 years while you made $35k. They're ahead financially despite the loans.",
+            "why": "Avoiding all debt seems smart but delaying graduation has opportunity costs. You lost 2 years of higher earning potential. Sometimes smart borrowing for education is worth it.",
+            "status_changes": {
+              "money": 0,
+              "credit": "Not built",
+              "stress": "very high",
+              "opportunities": 2
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_2",
+      "age": 21,
+      "month": "January 2027",
+      "title": "Credit Card Temptation",
+      "scenario": "You already have $13,000 in student loan debt. A credit card company is offering you a card with a $3,000 limit. Your laptop died and you need a new one ($1,200). You have $200 in savings.",
+      "context_info": "Adding credit card debt on top of student loans can create a debt spiral. Credit cards charge 20-25% interest vs student loans at 4.5%. But sometimes you need things to continue school.",
+      "choices": [
+        {
+          "id": "choice_2a",
+          "label": "💻 Buy laptop with credit card, pay minimum",
+          "immediate_outcome": {
+            "text": "You got the credit card and bought a MacBook Pro for $1,200. You're paying the $35 minimum payment each month. At least you can finish your assignments.",
+            "status_changes": {
+              "money": -35
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "May 2028",
+            "months_later": 16,
+            "text": "Your credit card balance is now $1,520 (original $1,200 + $320 interest). You've paid $560 in minimum payments but the balance barely moved. Combined with student loans, you'll graduate with $30,020 in total debt instead of $28,500.",
+            "why": "Credit card interest at 22% is 5x higher than student loan rates. Minimum payments trap you in debt. That $1,200 laptop cost you $1,520+ because of interest charges.",
+            "status_changes": {
+              "money": -30020,
+              "credit": "Fair (640)",
+              "stress": "very high",
+              "opportunities": 4
+            },
+            "tutorial_id": "credit_cards"
+          }
+        },
+        {
+          "id": "choice_2b",
+          "label": "💰 Buy used/refurbished laptop with savings",
+          "immediate_outcome": {
+            "text": "You declined the credit card and bought a refurbished Dell laptop for $400. Not fancy but it works. You have $0 savings now but no new debt.",
+            "status_changes": {
+              "money": -200
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "May 2028",
+            "months_later": 16,
+            "text": "Your laptop lasted through graduation. You avoided $1,200 in credit card debt and the interest that would have come with it. You graduated with only your student loans ($28,500) - no credit card debt hanging over you.",
+            "why": "Living below your means and buying what you need (not want) kept you out of high-interest debt. The refurbished laptop did the job without adding expensive debt on top of your student loans.",
+            "status_changes": {
+              "money": -28500,
+              "credit": "Building",
+              "stress": "medium",
+              "opportunities": 5
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_2c",
+          "label": "🤝 Ask family for help/loan",
+          "immediate_outcome": {
+            "text": "Your uncle loaned you $1,200 interest-free. You agreed to pay him back $100/month for a year. He's helping you avoid debt.",
+            "status_changes": {
+              "money": -100
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "May 2028",
+            "months_later": 16,
+            "text": "You paid your uncle back in full ($1,200 over 12 months). Zero interest saved you $320 compared to credit cards. You graduated with only your student loans ($28,500). Your uncle is proud of you for taking the loan seriously.",
+            "why": "Borrowing from family at 0% interest is way better than 22% credit card rates. You showed maturity by paying it back on time, which strengthened your relationship and avoided expensive debt.",
+            "status_changes": {
+              "money": -28500,
+              "credit": "Building",
+              "stress": "low",
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_3",
+      "age": 22,
+      "month": "June 2028",
+      "title": "First Job Negotiation",
+      "scenario": "You got a job offer in Albany: $48,000/year doing IT support. Your friend says you should negotiate for $52,000 because that's market rate. But you're scared they'll rescind the offer. You have $28,500 in student loans and need to start paying them in 6 months.",
+      "context_info": "Negotiating your first salary sets the baseline for your entire career. A $4,000 difference now compounds - every future raise is a percentage of your base. Most employers expect negotiation.",
+      "choices": [
+        {
+          "id": "choice_3a",
+          "label": "💪 Negotiate for $52,000",
+          "immediate_outcome": {
+            "text": "You sent an email: 'I'm excited about this role. Based on market research for IT support in Albany, would you consider $52,000?' They responded: 'We can do $51,000.' You accepted!",
+            "status_changes": {
+              "money": 3400
+            }
+          },
+          "delayed_consequence": {
+            "age": 25,
+            "month": "June 2031",
+            "months_later": 36,
+            "text": "You've been at $51,000 for 3 years with 3% annual raises. You're now making $55,711. You've earned $162,300 total over 3 years. Your student loans are on track to be paid off at 32. You can afford a nice apartment in downtown Albany.",
+            "why": "Negotiating added $3,000/year to your base. Over 3 years with raises, you earned $9,300 MORE than if you'd accepted $48k. That's enough to make an extra year of student loan payments. Negotiating pays off for decades.",
+            "status_changes": {
+              "money": 162300,
+              "credit": "Good (720)",
+              "stress": "low",
+              "opportunities": 7
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_3b",
+          "label": "😰 Accept $48,000 immediately",
+          "immediate_outcome": {
+            "text": "You accepted $48,000 without negotiating. You're just grateful to have a job. You start in 2 weeks.",
+            "status_changes": {
+              "money": 3200
+            }
+          },
+          "delayed_consequence": {
+            "age": 25,
+            "month": "June 2031",
+            "months_later": 36,
+            "text": "You've been at $48,000 for 3 years with 3% raises. You're now making $52,442. You've earned $152,975 total. Your student loan payments feel tight on this salary. You're living in a cheaper area (Cohoes) because downtown Albany rents are too expensive.",
+            "why": "Not negotiating cost you $9,325 over 3 years. That's 4 months of student loan payments you could have made. Your raises were percentages of a lower base, so the gap grows every year. You left money on the table.",
+            "status_changes": {
+              "money": 152975,
+              "credit": "Fair (670)",
+              "stress": "high",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_3c",
+          "label": "🎓 Ask for $50k + student loan assistance",
+          "immediate_outcome": {
+            "text": "You asked for $50,000 plus $200/month toward student loans as a benefit. They countered: '$49,000 plus $100/month student loan assistance.' You accepted!",
+            "status_changes": {
+              "money": 3267
+            }
+          },
+          "delayed_consequence": {
+            "age": 25,
+            "month": "June 2031",
+            "months_later": 36,
+            "text": "You've earned $156,300 over 3 years ($49k + raises). Plus, the company paid $3,600 toward your student loans ($100/month x 36 months). Total compensation: $159,900. Your loans are $3,600 closer to being paid off. You negotiated creatively and it paid off.",
+            "why": "Asking for non-salary benefits shows sophistication. The $100/month student loan help ($1,200/year) is worth more to you than to the company. Creative negotiation got you more total value.",
+            "status_changes": {
+              "money": 159900,
+              "credit": "Good (710)",
+              "stress": "medium",
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    }
+  ]
+}

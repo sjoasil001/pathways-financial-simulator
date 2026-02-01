@@ -1,0 +1,15 @@
+{
+  "characters": [
+    { "id": "maya", "name": "Maya", "age": 17, "description": "Just graduated high school", "detail": "First job at Crossgates Mall", "emoji": "🛍️", "image": "/src/assets/characters/maya.svg", "playable": true },
+
+    { "id": "jordan", "name": "Jordan", "age": 19, "description": "HVCC student", "detail": "Works part-time", "emoji": "🎓", "image": "/src/assets/characters/jordan.svg","playable": true },
+    { "id": "alex", "name": "Alex", "age": 18, "description": "GlobalFoundries intern", "detail": "High-paying but complex benefits", "emoji": "🏭", "image": "/src/assets/characters/alex.svg","playable": true },
+    { "id": "casey", "name": "Casey", "age": 17, "description": "Retail worker", "detail": "Multiple part-time jobs", "emoji": "🧾", "image": "/src/assets/characters/casey.svg","playable": true },
+
+    { "id": "ria", "name": "Ria", "age": 18, "description": "Gig worker", "detail": "DoorDash + babysitting", "emoji": "🚗","image": "/src/assets/characters/ria.svg", "playable": true },
+    { "id": "dev", "name": "Dev", "age": 20, "description": "SUNY student", "detail": "Student loans starting", "emoji": "📚","image": "/src/assets/characters/dev.svg", "playable": true },
+    { "id": "noor", "name": "Noor", "age": 19, "description": "Helping family", "detail": "Bills come first", "emoji": "🏠",   "image": "/src/assets/characters/sam.svg", "playable": true },
+    { "id": "eli", "name": "Eli", "age": 18, "description": "New driver", "detail": "Car costs hit hard", "emoji": "⛽", "image": "/src/assets/characters/other.svg","playable": true },
+    { "id": "zoe", "name": "Zoe", "age": 21, "description": "First apartment", "detail": "Rent + utilities reality", "emoji": "🔑", "image": "/src/assets/characters/zoe.svg","playable": true }
+  ]
+}

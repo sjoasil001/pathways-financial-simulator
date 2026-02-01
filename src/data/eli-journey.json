@@ -1,0 +1,339 @@
+{
+  "character_id": "eli",
+  "character_name": "Eli",
+  "starting_age": 18,
+  "starting_status": {
+    "money": 2500,
+    "credit": "Not built",
+    "stress": "low",
+    "opportunities": 3
+  },
+  "decisions": [
+    {
+      "id": "decision_1",
+      "age": 18,
+      "month": "July 2024",
+      "title": "First Car Decision",
+      "scenario": "You just got your license and saved $2,500 from working at Stewart's. You need a car to get to community college and work. Your options: (1) $2,000 Honda Civic 2005, high miles but runs. (2) $8,000 Mazda3 2015 with a loan. (3) $15,000 Subaru WRX 2018 - your dream car - with a bigger loan.",
+      "context_info": "Cars are one of the biggest expenses young people face. Beyond the purchase price, you'll pay insurance, gas, maintenance, and repairs. In the Capital Region, insurance for teen drivers averages $200-350/month.",
+      "choices": [
+        {
+          "id": "choice_1a",
+          "label": "🚗 Buy the $2k Honda with cash",
+          "immediate_outcome": {
+            "text": "You bought the 2005 Honda Civic with 160k miles for $2,000 cash. It's not pretty but it runs. You got insurance: $280/month because you're 18. You have $500 left in savings.",
+            "status_changes": {
+              "money": 500
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "March 2025",
+            "months_later": 8,
+            "text": "Your Honda needed $600 in repairs (timing belt). You also spent $2,240 on insurance over 8 months. Total first-year car costs: $2,000 (car) + $2,240 (insurance) + $600 (repairs) + $960 (gas) = $5,800. No car payment means you could afford it.",
+            "why": "Buying a cheap car with cash meant no monthly payment eating your paycheck. The repairs hurt but were cheaper than car payments would have been. You own the car outright - no debt.",
+            "status_changes": {
+              "money": -5300,
+              "credit": "Not built",
+              "stress": "medium",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_1b",
+          "label": "💰 Finance the $8k Mazda3",
+          "immediate_outcome": {
+            "text": "You put $2,000 down and financed $6,000 at 8% interest for 4 years. Your payment is $146/month. The car is way nicer - 2015 with 70k miles. Insurance: $310/month (newer car = higher insurance).",
+            "status_changes": {
+              "money": -456
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "March 2025",
+            "months_later": 8,
+            "text": "Your car runs great (only $100 in maintenance). But you've paid: $1,168 in car payments + $2,480 in insurance + $100 (maintenance) + $800 (gas) = $4,548 in 8 months. You still owe $5,200 on the car. You're realizing car payments last for YEARS.",
+            "why": "Financing a nicer car meant reliable transportation but locked you into $456/month in fixed costs (payment + insurance) for 4 years. That's $21,888 over the life of the loan for a car worth $6,000 today.",
+            "status_changes": {
+              "money": -4548,
+              "credit": "Building (660)",
+              "stress": "high",
+              "opportunities": 3
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_1c",
+          "label": "🏎️ Finance the $15k Subaru WRX (dream car)",
+          "immediate_outcome": {
+            "text": "You put $2,000 down and financed $13,000 at 9% interest (higher because you're 18 with no credit) for 5 years. Your payment is $270/month. The car is SICK - turbocharged, AWD, sporty. Insurance: $380/month (sports car + young driver = expensive).",
+            "status_changes": {
+              "money": -650
+            }
+          },
+          "delayed_consequence": {
+            "age": 19,
+            "month": "March 2025",
+            "months_later": 8,
+            "text": "You love the car but you're broke. You've paid: $2,160 (payments) + $3,040 (insurance) + $200 (premium gas is expensive) + $1,280 (gas - it gets 22mpg) = $6,680 in 8 months. You still owe $11,800. You had to skip community college this semester because you couldn't afford tuition AND the car.",
+            "why": "Your dream car became a nightmare. The $650/month in fixed costs ($7,800/year) is eating 40% of your part-time income. You're car-rich but life-poor. The car is depreciating while you pay interest on a depreciating asset.",
+            "status_changes": {
+              "money": -6680,
+              "credit": "Fair (620)",
+              "stress": "very high",
+              "opportunities": 1
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_2",
+      "age": 19,
+      "month": "October 2025",
+      "title": "Insurance Increase Shock",
+      "scenario": "You got a speeding ticket on I-87 near Albany (doing 72 in a 55). The ticket is $250. Your insurance company sent a notice: your premium is increasing from $280/month to $370/month because of the ticket. That's an extra $90/month for the next 3 years.",
+      "context_info": "Traffic violations stay on your record for 3 years in NY and significantly increase insurance costs. A single speeding ticket can cost you $3,000+ over 3 years in increased premiums, plus the ticket fine.",
+      "choices": [
+        {
+          "id": "choice_2a",
+          "label": "😤 Just pay it and drive more carefully",
+          "immediate_outcome": {
+            "text": "You paid the $250 ticket. Your insurance went up to $370/month. You're more careful now but the damage is done.",
+            "status_changes": {
+              "money": -370
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "October 2028",
+            "months_later": 36,
+            "text": "The ticket finally fell off your record. Over 3 years, you paid an extra $3,240 in insurance ($90/month x 36 months) plus the $250 ticket. Total cost of going 17 over: $3,490. That could have been a down payment on an apartment.",
+            "why": "One speeding ticket cost you $3,490 over 3 years. Insurance companies punish violations severely. The 'hurry tax' of speeding cost you months of car payments worth of money.",
+            "status_changes": {
+              "money": -3490,
+              "stress": "high",
+              "opportunities": 3
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_2b",
+          "label": "📚 Take a defensive driving course ($75)",
+          "immediate_outcome": {
+            "text": "You signed up for a defensive driving course online ($75, takes 6 hours). In NY, completing it can reduce points on your license and get you a 10% insurance discount. You passed!",
+            "status_changes": {
+              "money": -280
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "October 2028",
+            "months_later": 36,
+            "text": "The ticket increased your base rate BUT the defensive driving course got you 10% off. Your insurance went to $333/month (up from $280, but less than the $370 it would have been). Over 3 years, you paid an extra $1,908 instead of $3,240. You saved $1,332 by investing $75 and 6 hours.",
+            "why": "Taking action to mitigate the damage showed insurance companies you're serious about safety. The course paid for itself 17x over. Smart people don't just accept consequences - they minimize them.",
+            "status_changes": {
+              "money": -1908,
+              "stress": "medium",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_2c",
+          "label": "🚗 Switch to my parent's insurance as a driver",
+          "immediate_outcome": {
+            "text": "Your mom agreed to add you to her policy as an 'occasional driver.' Her premium went up $120/month total (less than your $370 solo policy). You pay her $120/month plus the $250 ticket.",
+            "status_changes": {
+              "money": -120
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "October 2028",
+            "months_later": 36,
+            "text": "Being on your parent's policy saved you. You paid $120/month instead of $370/month. Over 3 years, you saved $9,000 compared to your own policy. When you turned 21 and got your own policy again, the ticket had fallen off and you got a better rate.",
+            "why": "Young drivers on parent policies pay way less than solo policies. The ticket still hurt but being on a family policy with good history softened the blow. Swallowing your pride and asking for help saved you $9,000.",
+            "status_changes": {
+              "money": -4320,
+              "credit": "Building",
+              "stress": "low",
+              "opportunities": 5
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_3",
+      "age": 20,
+      "month": "February 2026",
+      "title": "Accident & Deductible Reality",
+      "scenario": "You slid on black ice in Latham and hit a guardrail. No one was hurt but your car has $2,800 in damage. Your insurance has a $1,000 deductible (the amount you pay before insurance kicks in). The body shop wants $1,000 upfront to start repairs. You have $600 in savings.",
+      "context_info": "Deductibles are the amount you pay out-of-pocket before insurance covers the rest. Lower deductibles mean higher monthly premiums. Higher deductibles mean lower premiums but bigger bills when accidents happen. Most young people choose high deductibles to save monthly money, then get surprised when they actually need the insurance.",
+      "choices": [
+        {
+          "id": "choice_3a",
+          "label": "💳 Put the $1,000 on a credit card",
+          "immediate_outcome": {
+            "text": "You put the $1,000 deductible on a credit card (22% APR). Your car is fixed. Insurance covered the other $1,800. You're making $35 minimum payments on the card.",
+            "status_changes": {
+              "money": -35
+            }
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "February 2027",
+            "months_later": 12,
+            "text": "You've been making minimum payments for a year. You've paid $420 but still owe $850 (original $1,000 - $150 paid off + $200 in interest). That $1,000 deductible will actually cost you $1,350+ by the time you pay it off. The accident keeps costing you.",
+            "why": "Financing emergencies on credit cards turns a one-time cost into a long-term drain. The 22% interest meant that $1,000 deductible actually cost you $350+ extra. Emergency funds exist specifically to avoid this trap.",
+            "status_changes": {
+              "money": -1350,
+              "credit": "Fair (640)",
+              "stress": "very high",
+              "opportunities": 2
+            },
+            "tutorial_id": "credit_cards"
+          }
+        },
+        {
+          "id": "choice_3b",
+          "label": "🤝 Ask family for help, pay them back",
+          "immediate_outcome": {
+            "text": "Your dad loaned you $400 to cover the gap (you had $600). You paid the $1,000 deductible. You agreed to pay your dad back $50/month for 8 months. No interest.",
+            "status_changes": {
+              "money": -50
+            }
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "February 2027",
+            "months_later": 12,
+            "text": "You paid your dad back in full over 8 months ($400 total, no interest). The accident cost you exactly $1,000 - nothing more. You avoided interest charges and strengthened your relationship by honoring the loan. Your dad respects your responsibility.",
+            "why": "Borrowing from family at 0% is infinitely better than credit cards at 22%. You saved $350+ in interest. Paying family back reliably builds trust and keeps that help available for future real emergencies.",
+            "status_changes": {
+              "money": -1000,
+              "credit": "Building",
+              "stress": "medium",
+              "opportunities": 4
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_3c",
+          "label": "💰 Withdraw from emergency fund you've been building",
+          "immediate_outcome": {
+            "text": "You've been saving $50/month for the past year in an emergency fund. You have $800 saved. Combined with your $600, you have $1,400. You paid the $1,000 deductible in cash and still have $400 left for emergencies.",
+            "status_changes": {
+              "money": 400
+            }
+          },
+          "delayed_consequence": {
+            "age": 21,
+            "month": "February 2027",
+            "months_later": 12,
+            "text": "The accident cost you $1,000 but didn't derail your finances. You rebuilt your emergency fund to $1,000 over the next year. When your timing belt broke ($700), you had the cash to fix it immediately. You're learning that emergency funds are like insurance against life's surprises.",
+            "why": "This is exactly why emergency funds exist. The accident was expensive but not catastrophic. You paid zero interest, avoided debt, and rebuilt the fund. Financial stability comes from preparing for inevitable surprises.",
+            "status_changes": {
+              "money": 1000,
+              "credit": "Good (700)",
+              "stress": "low",
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision_4",
+      "age": 22,
+      "month": "June 2028",
+      "title": "Car vs. Career Tradeoff",
+      "scenario": "You got accepted to a coding bootcamp in downtown Albany that could lead to a $60k tech job. It's 12 weeks, full-time, 9am-5pm Monday-Friday. There's free parking downtown BUT gas + parking will cost $200/month. Alternatively, you could sell your car, take CDTA, and save $450/month (no car payment, insurance, or gas) during bootcamp.",
+      "context_info": "Cars enable opportunities but also drain money. Sometimes the best financial move is temporarily giving up convenience to invest in a bigger opportunity. The question is: what's the ROI of car freedom vs. career advancement?",
+      "choices": [
+        {
+          "id": "choice_4a",
+          "label": "🚗 Keep car, drive to bootcamp",
+          "immediate_outcome": {
+            "text": "You're keeping your car. You drive downtown daily (20 min). You pay $200/month for gas and parking. You have $250/month left after all car costs to live on during bootcamp (you're not working).",
+            "status_changes": {
+              "money": -200
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "September 2028",
+            "months_later": 3,
+            "text": "You finished bootcamp! You got a job offer: $58,000. During the 3 months, your car cost you $1,350 (payment + insurance + gas + parking). You had to put some groceries on credit cards because money was tight. Your car gave you flexibility but cost you financially.",
+            "why": "Keeping the car maintained your independence and was convenient. But the $1,350 cost during bootcamp meant you had to go into debt for living expenses. Sometimes 'freedom' is expensive.",
+            "status_changes": {
+              "money": 58000,
+              "credit": "Fair (670)",
+              "stress": "medium",
+              "opportunities": 6
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_4b",
+          "label": "🚌 Sell car, use CDTA, focus on bootcamp",
+          "immediate_outcome": {
+            "text": "You sold your car for $3,500 (used the money to pay off remaining loan + pocketed $1,200). You got a CDTA monthly pass ($60). Commute takes 45 minutes but you can study on the bus. You save $450/month with no car costs.",
+            "status_changes": {
+              "money": 1200
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "September 2028",
+            "months_later": 3,
+            "text": "You finished bootcamp debt-free! The $1,200 from selling your car + $450/month savings meant you lived comfortably during bootcamp without going into debt. You got a job offer: $58,000. You're now buying a better car ($8k) in cash with your first paycheck. Living without a car for 3 months was inconvenient but financially smart.",
+            "why": "Temporarily sacrificing car ownership freed up $1,200 + $1,350 in car costs = $2,550. You used that money to avoid debt during bootcamp and emerged with no financial stress. Sometimes taking a step back accelerates you forward.",
+            "status_changes": {
+              "money": 58000,
+              "credit": "Good (710)",
+              "stress": "low",
+              "opportunities": 7
+            },
+            "tutorial_id": null
+          }
+        },
+        {
+          "id": "choice_4c",
+          "label": "🏠 Move downtown temporarily, walk to bootcamp",
+          "immediate_outcome": {
+            "text": "You found a 3-month sublet downtown for $700/month (vs your current $550 in Cohoes). You're walking to bootcamp (15 min). You're keeping your car but barely using it (parked at your sublet). Gas costs drop to $50/month.",
+            "status_changes": {
+              "money": -700
+            }
+          },
+          "delayed_consequence": {
+            "age": 22,
+            "month": "September 2028",
+            "months_later": 3,
+            "text": "You finished bootcamp well-rested and focused. The extra $150/month in rent was worth it - you got to class in 15 minutes vs 45 on the bus or 20 driving + parking. You got the job: $58,000. You moved back to Cohoes after bootcamp. Your car barely depreciated because you put 200 miles on it instead of 2,000.",
+            "why": "Optimizing for TIME during an intensive program was smart. The extra $450 over 3 months in rent paid off in focus and energy. You kept the car but minimized its costs. Sometimes spending strategically on convenience buys better outcomes.",
+            "status_changes": {
+              "money": 58000,
+              "credit": "Good (700)",
+              "stress": "low",
+              "opportunities": 7
+            },
+            "tutorial_id": null
+          }
+        }
+      ]
+    }
+  ]
+}
