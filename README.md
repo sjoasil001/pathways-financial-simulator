@@ -1,8 +1,8 @@
-# 💰 Pathways - Financial Simulator for Capital Region Youth
+# Pathways - Financial Simulator for Capital Region Youth
 
 An interactive financial literacy game that lets young people experience 8 years of financial decisions (ages 17-25) in a safe, simulated environment. Built for Capital Region (NY) youth to learn through consequences before facing them in real life.
 
-## 🎯 The Problem
+## The Problem
 
 **1 in 3 Capital Region young adults start their adult life in debt** - not because they're irresponsible, but because nobody taught them how money actually works.
 
@@ -14,7 +14,7 @@ Traditional financial literacy education:
 
 By the time you learn (credit score damaged, IRS penalties accrued, apartment rejected), **it's too late to undo.**
 
-## ✨ The Solution
+## The Solution
 
 **Pathways** creates a safe space to fail at money. Make real financial decisions, see immediate outcomes, then jump forward in time to experience the delayed consequences. After making mistakes, unlock interactive tutorials with step-by-step guidance and real Capital Region resources.
 
@@ -27,7 +27,7 @@ By the time you learn (credit score damaged, IRS penalties accrued, apartment re
 - **Local Resources**: Every resource is real and Capital Region-specific (SEFCU, VITA tax help at 90 State St Albany, HVCC counseling)
 - **Mobile-Responsive**: Works on phones and computers
 
-## 🎮 How It Works
+## How It Works
 
 1. **Choose a character** with different starting circumstances
 2. **Make decisions** at critical financial moments (ages 17-25)
@@ -36,14 +36,14 @@ By the time you learn (credit score damaged, IRS penalties accrued, apartment re
 5. **Learn from mistakes** - unlock tutorials with real resources after bad decisions
 6. **Replay with knowledge** - try different paths to see better outcomes
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **React** (Vite) - Fast, modern frontend framework
 - **React Router** - Client-side routing for game flow
 - **Tailwind CSS** - Utility-first styling with custom color palette
 - **JSON-based narrative system** - Easy to update scenarios and add characters
 
-## 🚀 Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 - Node.js 16+ and npm
@@ -69,7 +69,7 @@ npm run build
 npm run preview
 ```
 
-## 🌟 Character Journeys
+## Character Journeys
 
 Each character represents a different starting point that Capital Region youth face:
 
@@ -81,7 +81,7 @@ Each character represents a different starting point that Capital Region youth f
 - **Ria** (18) - DoorDash + babysitting gig worker, dealing with 1099 taxes
 - **Noor** (19) - Helping family financially, managing competing priorities
 
-## 💡 Example: Maya's Tax Filing Journey
+## Example: Maya's Tax Filing Journey
 
 **Decision (Age 19)**: You receive a W-2 form from Crossgates. File taxes or ignore it?
 
@@ -95,7 +95,7 @@ Each character represents a different starting point that Capital Region youth f
 - What documents you need (W-2, Social Security Number)
 - How to avoid this next year
 
-## 📍 Capital Region Focus
+## Capital Region Focus
 
 All scenarios and resources are hyper-local:
 
@@ -121,7 +121,7 @@ All scenarios and resources are hyper-local:
 - Overdraft fees and payment cascades
 - Employment reliability expectations
 
-## 📚 Educational Philosophy
+## Educational Philosophy
 
 **Traditional approach fails because:**
 - Information is taught before it's relevant
